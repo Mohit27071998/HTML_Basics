@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    attributes ==> text,number,email,date,datetime-local,month,week,range,color,radio,checkbox,file,submit,reset
+</head>
+<body>
+    <!-- more attributes ==> readonly,diasabled,size(box width),maxlength,pattern,use regex(search on net accordingly)
+    required for compulsory filling form,autocomplete -->
+    <!-- two method attriburtes==> get(to fetch the data{login}) ans post(create a new data{regestering}) -->
+    <form autocomplete="off" action="file.php" method="post">
+      <h3 align="center">Application Form </h3>
+      <div>
+        <!-- (name) in input is use for mapping frontend value with backend value -->
+        <label for="UserName"> UserName</label><br>
+        <input type="text" name="UserName" value="goku" disabled>
+        <!-- value is for default value -->
+      </div>
+      <div>
+        <!-- placeholder andar naav already taka sathi -->
+        <label for="FullName"> FullName</label><br>
+        <input type="text" name="fname" placeholder="enter name" readonly>
+      </div>
+      <div>
+        <label for="Number"> Number</label><br>
+        <!-- <input type="tel"> -->
+        <!-- tel is use for not showing two up and down arrow -->
+        <input type="number" name="number" maxlength="10" pattern="regex">
+        <!-- but use number as a type -->
+      </div>
+      <div>
+        <label for="Email"> Email</label><br>
+        <input type="Email" name="Email" required >
+      </div>
+      <div>
+        <label for="Password"> Password</label><br>
+        <input type="Password"><br>
+      </div>
+      <div>
+        <label for="gender">Gender</label><br>
+        Male<input type="radio" name="gender">
+        Female<input type="radio" name="gender">
+      </div><br>
+
+      <div>
+        <label for="subjects"> Subjects:</label><br>
+       HTML <input type="checkbox" name="html" ><br>
+       CSS <input type="checkbox" name="css" ><br>
+       JS <input type="checkbox" name="js" ><br>
+       Price<input type="range" name="Price" ><br>
+      </div><br>
+
+      <div>
+        <label for="cloths" >Type of cloths</label>
+        <select name="cloths" id="cloth">
+        <option value="shirt">shirt</option>
+        <option value="jeans">jeans</option>
+        <option value="tshirt">tshirt</option>
+    </select>
+      </div><br>
+      <div><input type="submit" value="submit">
+      <input type="reset" value="Reset">
+    </div>
+</form>
+</body>
+</html>
